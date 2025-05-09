@@ -7,7 +7,7 @@ DESTINATION="/usr/local/bin/metascan"
 # Install required tools
 echo "[INFO] Installing required tools..."
 # Instalar pacotes Python
-pip install binwalk ffmpeg-python
+pip install binwalk ffmpeg-python --break-system-packages
 
 # Instalar ferramentas de linha de comando
 sudo apt update
