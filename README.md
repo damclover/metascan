@@ -58,5 +58,5 @@ metascan image.jpg
 To remove Metascan:
 
 ```bash
-sudo rm /usr/local/bin/metascan
+sudo rm -r /usr/local/bin/metascan
 ```
