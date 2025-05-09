@@ -51,6 +51,7 @@ metascan image.jpg
 * pdfinfo
 * ffprobe (from ffmpeg)
 * binwalk
+* identify (ImageMagic)
 
 ## Uninstallation
 
