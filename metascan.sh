@@ -31,6 +31,12 @@ RESULT+="File: $FILE\n\n"
 if file "$FILE" | grep -Eiq 'image|pdf|document'; then
     RESULT+="=============== ExifTool ===============\n"
     RESULT+="$(exiftool "$FILE" 2>/dev/null || echo "ExifTool not found or not applicable.")\n\n"
+    
+    # Adicionando a ferramenta identify para imagens
+    if file "$FILE" | grep -iq "image"; then
+        RESULT+="=============== Identify (ImageMagick) ===============\n"
+        RESULT+="$(identify -verbose "$FILE" 2>/dev/null || echo "Identify not found or not applicable.")\n\n"
+    fi
 fi
 
 RESULT+="=============== Strings ===============\n"
